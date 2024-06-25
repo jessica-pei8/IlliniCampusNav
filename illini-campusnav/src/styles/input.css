@@ -1,0 +1,24 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+.link-underline-animation {
+    position: relative;
+  }
+  
+  .link-underline-animation::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -5px; /* Adjust based on your preference */
+    left: 0;
+    background-color: white; /* Or any color you prefer */
+    visibility: hidden;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .link-underline-animation:hover::after {
+    visibility: visible;
+    width: 100%;
+  }
